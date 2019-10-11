@@ -106,11 +106,14 @@ class SortingRobot:
             
             # Store the smallest index
             smallest_index = cur_index
-            # find next smallest element
+            # TO-DO: find next smallest element
             for j in range(cur_index, len(self._list)):
                 if self._list[j] < self._list[smallest_index]:
                     smallest_index = j
-          
+            # TO-DO: swap
+            temp = self._list[smallest_index]
+            self._list[smallest_index] = self._list[cur_index]
+            self._list[cur_index] = temp
 
 
 if __name__ == "__main__":
