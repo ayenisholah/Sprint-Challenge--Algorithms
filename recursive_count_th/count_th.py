@@ -10,5 +10,11 @@ def count_th(word):
     # Base case
     if (n == 0 or n < 2):
         return 0
+        # Recursive Case
+        # Check if the first substring matches
+    if (word[0:2] == 'th'):
+        return 1 + count_th(word[1:])
+
+
 
 count_th('th')
