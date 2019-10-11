@@ -14,7 +14,9 @@ def count_th(word):
         # Check if the first substring matches
     if (word[0:2] == 'th'):
         return 1 + count_th(word[1:])
-
+        # Otherwise return the count
+        # from the remaining index
+    return count_th(word[1:])
 
 
 count_th('th')
